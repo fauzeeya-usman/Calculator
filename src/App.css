@@ -1,38 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Gugi&family=Montserrat:wght@200&family=Poppins:wght@200&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/dist/line-awesome/css/line-awesome.min.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gugi", cursive;
+
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-image: url("/public/pic.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  padding: 20px 0;
+  text-align: center;
+  border-radius: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.calculator {
+  width: 345px;
+  height: auto;
+  margin: auto;
+  margin-top: 50px;
+  border: 3px solid #282c34;
+  border-radius: 20px;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffffcb;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.display {
+  border: 3px solid #282828;
+  font-size: 50px;
+  text-align: right;
+  margin-top: 5px;
+  margin-bottom: 16px;
+  padding: 30px 20px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  width: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; /* Prevent line breaks */
+}
+
+.buttons {
+  display: grid;
+  row-gap: 8px;
+  grid-template-rows: repeat(5, auto); /* Creates four rows with auto height */
+  justify-items: center; /* Centers the buttons horizontally */
+  align-items: center; /* Centers the buttons vertically */
+  width: auto;
+}
+
+button {
+  background-color: #282828;
+  color: #ffffff;
+  font-size: 30px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 70px;
+  height: 70px;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-right: 5px;
+  border: none;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  color: #282828;
+  transition: all 0.3s ease-in-out;
+  background-color: #fef200;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.green {
+  color: rgb(58, 255, 24);
+}
+
+.green:hover {
+  color: rgb(24, 159, 0);
+}
+
+.red {
+  color: rgb(227, 42, 0);
+}
+
+.red:hover {
+  color: rgb(227, 42, 0);
+}
+
+button[type="submit"] {
+  color: #282828;
+  padding: 15px 135px;
+  width: auto;
+  border: none;
+  cursor: pointer;
+  font-size: 30px;
+  transition: all 0.5s ease-in-out;
+  background-color: #fef200;
+  border: 3px solid #282828;
+}
+
+button[type="submit"]:hover {
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+  background-color: #4ef775;
+  border: none;
+}
+
+button[type="cancel"] {
+  /* color: #282828; */
+  color: rgb(227, 42, 0);
+  background-color: #282828;
+}
+
+button[type="cancel"]:hover {
+  /* color: #282828; */
+  background-color: rgb(227, 42, 0);
+  color: #ffffff;
 }
