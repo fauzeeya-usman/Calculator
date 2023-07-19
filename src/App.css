@@ -28,7 +28,6 @@ h1 {
   margin-bottom: 5px;
   padding: 20px 0;
   text-align: center;
-  border-radius: 10px;
 }
 
 .calculator {
@@ -36,7 +35,7 @@ h1 {
   height: auto;
   margin: auto;
   margin-top: 50px;
-  border: 3px solid #282c34;
+  border: 5px solid #282c34;
   border-radius: 20px;
   padding: 16px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -58,6 +57,12 @@ h1 {
   white-space: nowrap; /* Prevent line breaks */
 }
 
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*-----------------------------BUTTON STYLES-------------------------*/
 .buttons {
   display: grid;
   row-gap: 8px;
@@ -87,37 +92,15 @@ button:hover {
   background-color: #fef200;
 }
 
-.row {
-  display: flex;
-  justify-content: space-between;
-}
-
-.green {
-  color: rgb(58, 255, 24);
-}
-
-.green:hover {
-  color: rgb(24, 159, 0);
-}
-
-.red {
-  color: rgb(227, 42, 0);
-}
-
-.red:hover {
-  color: rgb(227, 42, 0);
-}
-
 button[type="submit"] {
   color: #282828;
-  padding: 15px 135px;
+  padding: 15px 95px;
   width: auto;
   border: none;
   cursor: pointer;
   font-size: 30px;
   transition: all 0.5s ease-in-out;
-  background-color: #fef200;
-  border: 3px solid #282828;
+  background-color: #f2e600;
 }
 
 button[type="submit"]:hover {
@@ -136,5 +119,65 @@ button[type="cancel"] {
 button[type="cancel"]:hover {
   /* color: #282828; */
   background-color: rgb(227, 42, 0);
+  color: #ffffff;
+}
+
+button[type="backspace"] {
+  /* color: #282828; */
+  color: rgb(227, 132, 0);
+  background-color: #282828;
+}
+
+button[type="backspace"]:hover {
+  /* color: #282828; */
+  background-color: rgb(227, 132, 0);
+  color: #ffffff;
+}
+
+button[type="add"] {
+  /* color: #282828; */
+  color: rgb(0, 199, 159);
+  background-color: #282828;
+}
+
+button[type="add"]:hover {
+  /* color: #282828; */
+  background-color: rgb(0, 199, 159);
+  color: #ffffff;
+}
+
+button[type="minus"] {
+  /* color: #282828; */
+  color: rgb(0, 98, 227);
+  background-color: #282828;
+}
+
+button[type="minus"]:hover {
+  /* color: #282828; */
+  background-color: rgb(0, 98, 227);
+  color: #ffffff;
+}
+
+button[type="times"] {
+  /* color: #282828; */
+  color: rgb(227, 0, 216);
+  background-color: #282828;
+}
+
+button[type="times"]:hover {
+  /* color: #282828; */
+  background-color: rgb(227, 0, 216);
+  color: #ffffff;
+}
+
+button[type="divide"] {
+  /* color: #282828; */
+  color: rgb(144, 0, 184);
+  background-color: #282828;
+}
+
+button[type="divide"]:hover {
+  /* color: #282828; */
+  background-color: rgb(144, 0, 184);
   color: #ffffff;
 }

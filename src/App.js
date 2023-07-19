@@ -37,6 +37,7 @@ function App() {
     }
   };
 
+
   return (
     <><h1>Calculator</h1>
       <div className="calculator">
@@ -54,25 +55,26 @@ function App() {
             <button onClick={() => handleButtonPress("4")}>4</button>
             <button onClick={() => handleButtonPress("5")}>5</button>
             <button onClick={() => handleButtonPress("6")}>6</button>
-            <button onClick={() => handleButtonPress("/")}>/</button>
+            <button type="divide" onClick={() => handleButtonPress("/")}><i class="las la-slash"></i></button>
           </div>
           {/* Third row */}
           <div className="row">
             <button onClick={() => handleButtonPress("1")}>1</button>
             <button onClick={() => handleButtonPress("2")}>2</button>
             <button onClick={() => handleButtonPress("3")}>3</button>
-            <button onClick={() => handleButtonPress("*")}>*</button>
+            <button type="times" onClick={() => handleButtonPress("*")}><i class="las la-times"></i></button>
           </div>
           {/* Fourth row */}
           <div className="row">
             <button onClick={() => handleButtonPress("0")}>0</button>
             <button onClick={() => handleButtonPress(".")}>.</button>
-            <button onClick={() => handleButtonPress("+")}>+</button>
-            <button onClick={() => handleBackspace()}><i class="las la-backspace"></i></button>
+            <button type="add" onClick={() => handleButtonPress("+")}><i class="las la-plus"></i></button>
+            <button type="minus" onClick={() => handleButtonPress("-")}><i class="las la-minus"></i></button>
 
           </div>
           <div className="row result">
-            <button type="submit" class="green" onClick={handleCalculate}>=</button>
+            <button type="backspace" onClick={() => handleBackspace()}><i class="las la-backspace"></i></button>
+            <button type="submit" onClick={handleCalculate}>=</button>
           </div>
         </div>
       </div></>
